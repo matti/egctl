@@ -5,4 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   egctl \
   && apt-get clean
 
-ENTRYPOINT [ "/usr/bin/egctl" ]
+WORKDIR /app
+COPY app .
+
+ENTRYPOINT [ "/app/entrypoint.sh" ]
