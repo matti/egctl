@@ -9,7 +9,7 @@ if [[ -z "$EGCTL_STATES" ]]; then
   EGCTL_STATES=${*:2}
 fi
 
-if [[ -z "$EGCTL_SILENT" ]]; then
+if [[ "${EGCTL_SILENT:-}" == "yes" ]]; then
   stream=/dev/null
 else
   stream=/dev/stdout
