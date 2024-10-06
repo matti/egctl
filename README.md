@@ -23,7 +23,7 @@ services:
   egctl:
     image: ghcr.io/matti/egctl
     environment:
-      - EGCTL_LOOP="yes"
-      - EGCTL_IP="192.168.56.65"
-      - EGCTL_STATES="off off off off"
+      - EGCTL_LOOP=yes
+      - EGCTL_IP=192.168.56.65
+      - EGCTL_STATES=off off off off
 ```
